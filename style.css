@@ -1,0 +1,28 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #222;
+}
+
+.color-wave-text {
+    font-size: 48px;
+    font-weight: bold;
+    background: linear-gradient(90deg, red, yellow, green, cyan, blue, magenta);
+    -webkit-background-clip: text;
+    color: transparent;
+    background-size: 200% 100%; /* Ensures text is clipped with background on Webkit-based browsers (Chrome, Safari) */
+    background-clip: text;
+    animation: colorFlow 7s linear infinite;
+}
+
+@keyframes colorFlow {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
